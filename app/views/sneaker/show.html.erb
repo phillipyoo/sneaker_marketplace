@@ -1,0 +1,13 @@
+<h1><%= "#{@sneaker.brand}"%></h1>
+<h4><%= "#{@sneaker.model}"%></h4>
+<h6><%= "#{@user.location}"%></h6>
+<p><%= "$#{@sneaker.price}"%></p>
+<p><%= "Seller: #{@user.first_name} #{@user.last_name}"%></p>
+
+<p><%=link_to "Add to wishlist", add_to_wishlist_path(:id => @sneaker.id), method: :post %></p>
+
+
+<%= image_tag @sneaker.picture if @sneaker.picture.attached? %>
+
+
+

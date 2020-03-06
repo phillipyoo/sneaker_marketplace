@@ -1,0 +1,21 @@
+<nav>
+    <div class="top-nav">
+        <p id="nav-text">
+            <span><%= link_to "Home", root_path%></span>
+            <span><%= link_to "Sell", new_sneaker_path%></span>
+            <span><%= link_to "New Releases", sneakers_path%></span>
+            <% if user_signed_in? %>
+                <span><%= link_to "Account", user_path(current_user.id)%></span>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            <% else %>
+                <%= link_to "Login/Signup", new_user_session_path %>
+            <% end %>
+            </span>
+        </p>
+      
+        <%= form_tag(sneakers_path, method: :get) do%>
+        <%= text_field_tag(:search, params[:search])%>
+        <%= submit_tag("Search")%>
+<%end%>
+    </div>
+</nav>

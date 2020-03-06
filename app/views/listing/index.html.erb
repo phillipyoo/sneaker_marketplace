@@ -1,0 +1,9 @@
+<h2>My Listing</h2>
+
+    <% @user.sneakers.each do |sneaker| %>
+        <p><%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%><p>
+        <p><%="#{sneaker.model}"%><p>
+        <p><%="#{sneaker.brand}"%><p>
+        <p><%="size: #{sneaker.size}"%><p>
+        <p><%="$ #{sneaker.price}"%><p>
+    <%end%>

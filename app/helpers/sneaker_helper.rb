@@ -1,0 +1,2 @@
+module SneakerHelper
+end
