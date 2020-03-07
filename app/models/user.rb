@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :sneakers
   has_many :listings
-  has_many :wishlists, dependent: :destroy
+  has_many :wishlists
 end

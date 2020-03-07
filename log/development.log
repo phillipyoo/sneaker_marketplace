@@ -37254,3 +37254,747 @@ Processing by WishlistController#index as HTML
 Completed 200 OK in 86ms (Views: 76.4ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for ::1 at 2020-03-07 14:02:26 +1000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (30.4ms)
+Completed 200 OK in 572ms (Views: 545.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:02:29 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.5ms)
+Completed 200 OK in 82ms (Views: 76.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user/edit" for ::1 at 2020-03-07 14:02:30 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/user/edit"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:02:33 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.6ms)
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/edit" for ::1 at 2020-03-07 14:02:35 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/user/edit"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:02:37 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:03:19 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.7ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:03:20 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (16.8ms)
+  Rendered devise/shared/_topnav.html.erb (0.9ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:04:35 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (15.6ms)
+  Rendered devise/shared/_topnav.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:04:44 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (4.1ms)
+  Rendered devise/shared/_topnav.html.erb (1.1ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:05:08 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (379.8ms)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<#<Class:0x00007fd45ab74658>:0x00007fd459c1abf8>):
+    1:     <h2><%="#{@user.first_name}'s Profile"%></h2>
+    2:     <%= link_to "Edit profile", edit_profile_path%>
+    3:     <%= link_to "Cancel", user_path%>
+    4: 
+    5:     <p><%= link_to "My Listings", listings_path %></p>
+    6:     <p><%= link_to "My Wishlist", wishlists_path%></p>
+  
+app/views/user/show.html.erb:3:in `_app_views_user_show_html_erb___3095862782683066797_70275015878420'
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:05:17 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (276.8ms)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fd45ab74658>:0x00007fd459b3a350>):
+     5:             <span><%= link_to "Sell", new_sneaker_path%></span>
+     6:             <span><%= link_to "New Releases", sneakers_path%></span>
+     7:             <% if user_signed_in? %>
+     8:                 <span><%= link_to "Account", user_path(current_user.id)%></span>
+     9:                 <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    10:             <% else %>
+    11:                 <%= link_to "Login/Signup", new_user_session_path %>
+  
+app/views/devise/shared/_topnav.html.erb:8:in `_app_views_devise_shared__topnav_html_erb__2847082186824788060_70274974314440'
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__1319269023588573585_70275015017040'
+Started GET "/" for ::1 at 2020-03-07 14:06:02 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (64.4ms)
+Completed 200 OK in 113ms (Views: 102.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:06:04 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/Users/phillipyoo/Repository/sneaker_marketplace/app/views/user/show.html.erb:3: syntax error, unexpected ')'
+...er.append=( link_to "Cancel", );@output_buffer.safe_append='
+...                              ^
+/Users/phillipyoo/Repository/sneaker_marketplace/app/views/user/show.html.erb:14: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/phillipyoo/Repository/sneaker_marketplace/app/views/user/show.html.erb:16: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/user/show.html.erb:3: syntax error, unexpected ')'
+app/views/user/show.html.erb:14: syntax error, unexpected ensure, expecting ')'
+app/views/user/show.html.erb:16: syntax error, unexpected end, expecting ')'
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:06:12 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.9ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:06:13 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (4.6ms)
+  Rendered devise/shared/_topnav.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:06:30 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.2ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:06:32 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.3ms)
+Completed 200 OK in 67ms (Views: 59.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:07:11 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (6.5ms)
+  Rendered devise/shared/_topnav.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:07:33 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (6.4ms)
+  Rendered devise/shared/_topnav.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:07:57 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `deep_stringify_keys' for "/user/show/8":String):
+    23: 
+    24:         <div>
+    25:             <%= f.submit "Edit"%>
+    26:             <%= f.submit "Cancel", user_path%>
+    27:         </div>
+    28:     <%end%>
+    29: <%end%>
+  
+app/views/user/edit.html.erb:26:in `block in _app_views_user_edit_html_erb__4444533358997605638_70275015982080'
+app/views/user/edit.html.erb:3:in `_app_views_user_edit_html_erb__4444533358997605638_70275015982080'
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:08:32 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (4.7ms)
+  Rendered devise/shared/_topnav.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/user/edit" for ::1 at 2020-03-07 14:08:33 +1000
+Processing by UserController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TtCkn9RqaJONczZLd9fIqwFaRthpEsfETahp+sKelABECjPg0a2y6VAN+NEmicm0WBLyATYLuWlmUlO9pNkDug==", "first_name"=>"Shauna", "last_name"=>"M", "email"=>"catwoman@gmail.com", "location"=>"Brisbane, QLD", "commit"=>"Cancel"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:08:33 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.1ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:08:35 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.3ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:08:40 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (6.9ms)
+  Rendered devise/shared/_topnav.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/user/edit" for ::1 at 2020-03-07 14:08:41 +1000
+Processing by UserController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gVL5g5fF9f/t+b9lX87o2EO2yxcsrqMXDZKQVFJzOivS5JzslgP2w18U/QIIcmYPnzBtqFDdOHqPGFH/AyexFg==", "first_name"=>"Shauna", "last_name"=>"M", "email"=>"catwoman@gmail.com", "location"=>"Brisbane, QLD", "commit"=>"Edit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:08:41 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.0ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:08:42 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:26:53 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (7.0ms)
+  Rendered devise/shared/_topnav.html.erb (1.3ms)
+Completed 200 OK in 106ms (Views: 104.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/user/edit" for ::1 at 2020-03-07 14:26:58 +1000
+Processing by UserController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YHVGrMN/Isf6XH2HOaDLMbf48xZ0umz+xip995edBKEzwyPDwrkh+0ixP+BuHEXma35VqQjJ95NEoLxcxsmPnA==", "first_name"=>"Shauna", "last_name"=>"M", "email"=>"catwoman@gmail.com", "location"=>"Brisbane, QLD", "commit"=>"Cancel"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:26:58 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.2ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:26:59 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.0ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:27:26 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (5.1ms)
+  Rendered devise/shared/_topnav.html.erb (1.4ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/user/edit" for ::1 at 2020-03-07 14:27:27 +1000
+Processing by UserController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LvRjnIPMTWlPopFkWcqZBLRGEHFyLQBDmGCVEUZsErh9QgbzggpOVf1P0wMOdhfTaMC2zg5emy4a6lS6FziZhQ==", "first_name"=>"Shauna", "last_name"=>"M", "email"=>"catwoman@gmail.com", "location"=>"Brisbane, QLD", "commit"=>"Cancel"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:27:27 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.0ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:27:28 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.1ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:27:45 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (17.5ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:27:47 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `deep_stringify_keys' for "/":String):
+    23: 
+    24:         <div>
+    25:             <%= f.submit "Edit"%>
+    26:             <%= f.submit "Cancel", root_path%>
+    27:         </div>
+    28:     <%end%>
+    29: <%end%>
+  
+app/views/user/edit.html.erb:26:in `block in _app_views_user_edit_html_erb__4444533358997605638_70275006142940'
+app/views/user/edit.html.erb:3:in `_app_views_user_edit_html_erb__4444533358997605638_70275006142940'
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:27:48 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.6ms)
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:27:57 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (4.9ms)
+  Rendered devise/shared/_topnav.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/user/edit" for ::1 at 2020-03-07 14:28:04 +1000
+Processing by UserController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7neIgMDnRC7eDkEZoG6xHa5zgd4Z2d8Z30adUbMdM1MD7tNAsWeLAmVe2MxPTQTqj9ouAQU/BHl99veF5j/8A==", "first_name"=>"Shauna", "last_name"=>"M", "email"=>"catwoman@gmail.com", "location"=>"Brisbane, QLDjj", "commit"=>"Cancel"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "location" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["location", "Brisbane, QLDjj"], ["updated_at", "2020-03-07 04:28:04.370617"], ["id", 8]]
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:28:04 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.6ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/show/8" for ::1 at 2020-03-07 14:28:06 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.2ms)
+Completed 200 OK in 49ms (Views: 44.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/user/edit/8" for ::1 at 2020-03-07 14:28:08 +1000
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering user/edit.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/user/edit.html.erb:2
+  Rendered user/edit.html.erb within layouts/application (9.1ms)
+  Rendered devise/shared/_topnav.html.erb (0.9ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/user/edit" for ::1 at 2020-03-07 14:28:11 +1000
+Processing by UserController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hOKvtvEHm0ujJYcp70pBpmTQgTHbyKi97wWXYgJ9DfrXVMrZ8MGYdxHIxU649s9xuFYnjqe7M9Btj1bJUymGxw==", "first_name"=>"Shauna", "last_name"=>"M", "email"=>"catwoman@gmail.com", "location"=>"Brisbane, QLD", "commit"=>"Edit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "location" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["location", "Brisbane, QLD"], ["updated_at", "2020-03-07 04:28:11.333404"], ["id", 8]]
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:28:11 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 14:28:18 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneaker/new" for ::1 at 2020-03-07 14:28:22 +1000
+Processing by SneakerController#new as HTML
+  Rendering sneaker/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sneaker/new.html.erb:3
+  Rendered sneaker/new.html.erb within layouts/application (8.8ms)
+  Rendered devise/shared/_topnav.html.erb (1.0ms)
+Completed 200 OK in 88ms (Views: 65.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/sneaker/new" for ::1 at 2020-03-07 14:28:28 +1000
+Processing by SneakerController#new as HTML
+  Rendering sneaker/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sneaker/new.html.erb:3
+  Rendered sneaker/new.html.erb within layouts/application (7.0ms)
+  Rendered devise/shared/_topnav.html.erb (0.9ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneaker" for ::1 at 2020-03-07 14:28:29 +1000
+Processing by SneakerController#index as HTML
+  Rendering sneaker/index.html.erb within layouts/application
+  [1m[36mSneaker Load (1.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/sneaker/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 123], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 121], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  Rendered sneaker/index.html.erb within layouts/application (89.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.3ms)
+Completed 200 OK in 146ms (Views: 133.7ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8b4fbbe0ceec70e138ef17ea4d2c53b701079ee/990NB.jpeg" for ::1 at 2020-03-07 14:28:29 +1000
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dedca1733af14a537a61685f1a9352814ba1290/yeezy350zebra.jpeg" for ::1 at 2020-03-07 14:28:29 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8b4fbbe0ceec70e138ef17ea4d2c53b701079ee", "filename"=>"990NB"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.5ms) [0m[34mGenerated URL for file at key: RL1JoY9vV1TRhQFbAf8QJvmC (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/RL1JoY9vV1TRhQFbAf8QJvmC?response-content-disposition=inline%3B%20filename%3D%22990NB.jpeg%22%3B%20filename%2A%3DUTF-8%27%27990NB.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T042829Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad067f0159e33c4767c7fd43d6a8c1439a94c935fddab91407901ada06c9c973)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/RL1JoY9vV1TRhQFbAf8QJvmC?response-content-disposition=inline%3B%20filename%3D%22990NB.jpeg%22%3B%20filename%2A%3DUTF-8%27%27990NB.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T042829Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad067f0159e33c4767c7fd43d6a8c1439a94c935fddab91407901ada06c9c973
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dedca1733af14a537a61685f1a9352814ba1290", "filename"=>"yeezy350zebra"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (0.9ms) [0m[34mGenerated URL for file at key: G6CMnLsFyrSHYsgAvyNeiVfQ (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/G6CMnLsFyrSHYsgAvyNeiVfQ?response-content-disposition=inline%3B%20filename%3D%22yeezy350zebra.jpeg%22%3B%20filename%2A%3DUTF-8%27%27yeezy350zebra.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T042829Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8707eaba5b097f6392ddfcf5e3785484b66ca0b6b3781f0b79ea75f0c5217a94)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/G6CMnLsFyrSHYsgAvyNeiVfQ?response-content-disposition=inline%3B%20filename%3D%22yeezy350zebra.jpeg%22%3B%20filename%2A%3DUTF-8%27%27yeezy350zebra.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T042829Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8707eaba5b097f6392ddfcf5e3785484b66ca0b6b3781f0b79ea75f0c5217a94
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+

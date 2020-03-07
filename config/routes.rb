@@ -13,14 +13,14 @@ Rails.application.routes.draw do
 
   #Show a pair 
   get '/sneaker/:id', to: 'sneaker#show', as: 'sneaker'
-
+  
+  #Show user profile
+  get '/user/show/:id', to: 'user#show', as: 'user'
+  
   #Edit profile
   get '/user/edit/:id', to: 'user#edit', as: 'edit_profile'
   patch '/user/edit', to: 'user#update', as: "update_profile"
-
-  #Show user profile
-  get '/user/show/:id', to: 'user#show', as: 'user'
-
+  
   #Show listing
   get '/user/show/:id/listing', to: 'listing#index', as:'listings'
 
