@@ -6,4 +6,6 @@
         <p><%="#{sneaker.brand}"%><p>
         <p><%="size: #{sneaker.size}"%><p>
         <p><%="$ #{sneaker.price}"%><p>
+    <%=link_to "Remove", remove_from_listings_path(:id => sneaker), method: "delete" %>
+    
     <%end%>

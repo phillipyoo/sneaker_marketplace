@@ -24,13 +24,16 @@ Rails.application.routes.draw do
   #Show listing
   get '/user/show/:id/listing', to: 'listing#index', as:'listings'
 
+  #Remove sneakers from listing
+  delete '/sneaker/delete', to: 'listing#destroy', as: "remove_from_listings"
+
   #Show wishlist
   get '/wishlist', to: 'wishlist#index', as: 'wishlists'
 
   #Add sneakers to wishlist
   post '/wishlist', to: 'wishlist#add', as: 'add_to_wishlist'
 
-  #Delete sneaker 
+  #Remove sneaker from wishlist
   delete '/sneaker/:id', to: 'wishlist#destroy', as:'remove_from_wishlist'
   
 
