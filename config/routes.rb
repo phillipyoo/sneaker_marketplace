@@ -29,6 +29,9 @@ Rails.application.routes.draw do
 
   #Add sneakers to wishlist
   post '/wishlist', to: 'wishlist#add', as: 'add_to_wishlist'
+
+  #Delete sneaker 
+  delete '/sneaker/:id', to: 'wishlist#destroy', as:'remove_from_wishlist'
   
 
 end

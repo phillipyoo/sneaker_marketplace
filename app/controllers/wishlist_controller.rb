@@ -18,4 +18,14 @@ class WishlistController < ApplicationController
             redirect_back(fallback_location: sneaker_path)
         end
     end
+
+    def destroy
+        user = current_user
+        wishlist = user.wishlists
+        item_id = wishlist.where(sneaker_id: params[:id]).first
+        item_id.destroy
+        flash[:notice] = "Item has been removed from your wishlist"
+        redirect_to wishlists_path
+    
+    end
 end
