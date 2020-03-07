@@ -6,6 +6,7 @@ class ListingController < ApplicationController
     def destroy
         user = current_user
         item_id = Sneaker.find(params[:id])
+        Wishlist.where(sneaker_id: params[:id]).destroy_all
         item_id.destroy
         
         redirect_to user_path(user)
