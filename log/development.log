@@ -35274,3 +35274,413 @@ Completed 200 OK in 57ms (Views: 48.6ms | ActiveRecord: 2.0ms)
 [ActiveJob] [ActiveStorage::PurgeJob] [ff48b45f-583c-4564-84c5-1cc0b4d1634d] [36m  S3 Storage (104.1ms) [0m[31mDeleted file from key: nvFf7YRsH6Qiog62tbVSa9ma[0m
 [ActiveJob] [ActiveStorage::PurgeJob] [ff48b45f-583c-4564-84c5-1cc0b4d1634d] [36m  S3 Storage (31.2ms) [0m[31mDeleted files by key prefix: variants/nvFf7YRsH6Qiog62tbVSa9ma/[0m
 [ActiveJob] [ActiveStorage::PurgeJob] [ff48b45f-583c-4564-84c5-1cc0b4d1634d] Performed ActiveStorage::PurgeJob (Job ID: ff48b45f-583c-4564-84c5-1cc0b4d1634d) from Async(default) in 154.6ms
+Started GET "/" for ::1 at 2020-03-07 13:14:17 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (28.4ms)
+Completed 200 OK in 144ms (Views: 126.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/user/show/4" for ::1 at 2020-03-07 13:14:40 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.8ms)
+Completed 200 OK in 173ms (Views: 166.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/show/4/listing" for ::1 at 2020-03-07 13:14:44 +1000
+Processing by ListingController#index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:3
+  Rendering listing/index.html.erb within layouts/application
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers" WHERE "sneakers"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/listing/index.html.erb:3
+  Rendered listing/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.6ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/sneaker" for ::1 at 2020-03-07 13:14:48 +1000
+Processing by SneakerController#index as HTML
+  Rendering sneaker/index.html.erb within layouts/application
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/sneaker/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 122], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 123], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 121], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  Rendered sneaker/index.html.erb within layouts/application (67.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.5ms)
+Completed 200 OK in 117ms (Views: 103.1ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dedca1733af14a537a61685f1a9352814ba1290/yeezy350zebra.jpeg" for ::1 at 2020-03-07 13:14:48 +1000
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8b4fbbe0ceec70e138ef17ea4d2c53b701079ee/990NB.jpeg" for ::1 at 2020-03-07 13:14:48 +1000
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ef3b4b1c0b29d55c6dcb9f7fd2388d26073cc387/airforce1.jpg" for ::1 at 2020-03-07 13:14:49 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dedca1733af14a537a61685f1a9352814ba1290", "filename"=>"yeezy350zebra"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8b4fbbe0ceec70e138ef17ea4d2c53b701079ee", "filename"=>"990NB"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.2ms) [0m[34mGenerated URL for file at key: G6CMnLsFyrSHYsgAvyNeiVfQ (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/G6CMnLsFyrSHYsgAvyNeiVfQ?response-content-disposition=inline%3B%20filename%3D%22yeezy350zebra.jpeg%22%3B%20filename%2A%3DUTF-8%27%27yeezy350zebra.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031449Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0d748f53a9e53b1e520240d38cbbc91ed5f78b29a5491bc5f30f89b12087cdf7)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/G6CMnLsFyrSHYsgAvyNeiVfQ?response-content-disposition=inline%3B%20filename%3D%22yeezy350zebra.jpeg%22%3B%20filename%2A%3DUTF-8%27%27yeezy350zebra.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031449Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=0d748f53a9e53b1e520240d38cbbc91ed5f78b29a5491bc5f30f89b12087cdf7
+Completed 302 Found in 28ms (ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: RL1JoY9vV1TRhQFbAf8QJvmC (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/RL1JoY9vV1TRhQFbAf8QJvmC?response-content-disposition=inline%3B%20filename%3D%22990NB.jpeg%22%3B%20filename%2A%3DUTF-8%27%27990NB.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031449Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ab2eb39236cff91f81487c91b8763190be6d1b63604fe103a6d094eb9a7ae30f)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/RL1JoY9vV1TRhQFbAf8QJvmC?response-content-disposition=inline%3B%20filename%3D%22990NB.jpeg%22%3B%20filename%2A%3DUTF-8%27%27990NB.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031449Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ab2eb39236cff91f81487c91b8763190be6d1b63604fe103a6d094eb9a7ae30f
+Completed 302 Found in 24ms (ActiveRecord: 1.8ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ef3b4b1c0b29d55c6dcb9f7fd2388d26073cc387", "filename"=>"airforce1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.4ms) [0m[34mGenerated URL for file at key: 9u8jGLjtHkMjvLjr9JssmyHB (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/9u8jGLjtHkMjvLjr9JssmyHB?response-content-disposition=inline%3B%20filename%3D%22airforce1.jpg%22%3B%20filename%2A%3DUTF-8%27%27airforce1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031449Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=950fbab2b2e2a9c710246e12dd11a6c506192b3f0a1dfec10f6a5a0dfd293e7a)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/9u8jGLjtHkMjvLjr9JssmyHB?response-content-disposition=inline%3B%20filename%3D%22airforce1.jpg%22%3B%20filename%2A%3DUTF-8%27%27airforce1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031449Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=950fbab2b2e2a9c710246e12dd11a6c506192b3f0a1dfec10f6a5a0dfd293e7a
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sneaker/new" for ::1 at 2020-03-07 13:14:50 +1000
+Processing by SneakerController#new as HTML
+  Rendering sneaker/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/sneaker/new.html.erb:3
+  Rendered sneaker/new.html.erb within layouts/application (7.4ms)
+  Rendered devise/shared/_topnav.html.erb (1.5ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sneaker" for ::1 at 2020-03-07 13:15:00 +1000
+Processing by SneakerController#sell as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nwkVBcTjqLlSQp0ZBoLowOJQ0EEjLwroFZOf0+CgI3TsDc+7fjBgyuA9826PKMens44O12stJK0FN15KbTYEEg==", "sneaker"=>{"brand"=>"Air Jordan", "model"=>"test", "price"=>"100", "size"=>"10", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fee215cef88 @tempfile=#<Tempfile:/var/folders/2j/f289lngd4msgznjw4vc110rr0000gn/T/RackMultipart20200307-10201-1m0a7bm.png>, @original_filename="logo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"sneaker[picture]\"; filename=\"logo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/sneaker_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sneaker_controller.rb:13
+  [1m[36mSneaker Create (1.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("model", "size", "price", "created_at", "updated_at", "brand", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["model", "test"], ["size", 10], ["price", "100.0"], ["created_at", "2020-03-07 03:15:00.464564"], ["updated_at", "2020-03-07 03:15:00.464564"], ["brand", "Air Jordan"], ["user_id", 4]]
+  ↳ app/controllers/sneaker_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sneaker_controller.rb:13
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 135], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/controllers/sneaker_controller.rb:19
+[36m  S3 Storage (325.1ms) [0m[32mUploaded file to key: VJZd2cekk1JaFHqCFq9oHomF (checksum: jiMTCSU1UUTgpTN+hAxdHg==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sneaker_controller.rb:19
+  [1m[36mActiveStorage::Blob Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "VJZd2cekk1JaFHqCFq9oHomF"], ["filename", "logo.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 51746], ["checksum", "jiMTCSU1UUTgpTN+hAxdHg=="], ["created_at", "2020-03-07 03:15:00.801459"]]
+  ↳ app/controllers/sneaker_controller.rb:19
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sneaker_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sneaker_controller.rb:19
+  [1m[36mActiveStorage::Attachment Create (1.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Sneaker"], ["record_id", 135], ["blob_id", 32], ["created_at", "2020-03-07 03:15:00.809811"]]
+  ↳ app/controllers/sneaker_controller.rb:19
+  [1m[36mSneaker Update (0.9ms)[0m  [1m[33mUPDATE "sneakers" SET "updated_at" = $1 WHERE "sneakers"."id" = $2[0m  [["updated_at", "2020-03-07 03:15:00.812367"], ["id", 135]]
+  ↳ app/controllers/sneaker_controller.rb:19
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sneaker_controller.rb:19
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ee6481cf-be3d-4648-8941-b50c8b756eca) to Async(default) with arguments: #<GlobalID:0x00007fee1fb33200 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/32>>
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sneaker_controller.rb:21
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ app/controllers/sneaker_controller.rb:21
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca] Performing ActiveStorage::AnalyzeJob (Job ID: ee6481cf-be3d-4648-8941-b50c8b756eca) from Async(default) with arguments: #<GlobalID:0x00007fee20bdb788 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/32>>
+Redirected to http://localhost:3000/sneaker
+Completed 200 OK in 369ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/sneaker" for ::1 at 2020-03-07 13:15:00 +1000
+Processing by SneakerController#index as HTML
+  Rendering sneaker/index.html.erb within layouts/application
+  [1m[36mSneaker Load (0.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/sneaker/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 122], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 123], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 135], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 121], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  Rendered sneaker/index.html.erb within layouts/application (29.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.4ms)
+Completed 200 OK in 95ms (Views: 86.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74741833d8dca459878c0a3c88a2f4d2b859ce8b/logo.png" for ::1 at 2020-03-07 13:15:00 +1000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74741833d8dca459878c0a3c88a2f4d2b859ce8b", "filename"=>"logo"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.4ms) [0m[34mGenerated URL for file at key: VJZd2cekk1JaFHqCFq9oHomF (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/VJZd2cekk1JaFHqCFq9oHomF?response-content-disposition=inline%3B%20filename%3D%22logo.png%22%3B%20filename%2A%3DUTF-8%27%27logo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031500Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=284a2fb8dab1566a7616d26c788d2a59340c025e976491aef8b0dab6517d887f)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/VJZd2cekk1JaFHqCFq9oHomF?response-content-disposition=inline%3B%20filename%3D%22logo.png%22%3B%20filename%2A%3DUTF-8%27%27logo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031500Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=284a2fb8dab1566a7616d26c788d2a59340c025e976491aef8b0dab6517d887f
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca] [36m  S3 Storage (198.0ms) [0m[34mDownloaded file from key: VJZd2cekk1JaFHqCFq9oHomF[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca]   [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 32]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca]   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ee6481cf-be3d-4648-8941-b50c8b756eca] Performed ActiveStorage::AnalyzeJob (Job ID: ee6481cf-be3d-4648-8941-b50c8b756eca) from Async(default) in 207.57ms
+Started GET "/user/show/4" for ::1 at 2020-03-07 13:15:01 +1000
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.4ms)
+Completed 200 OK in 99ms (Views: 93.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user/show/4/listing" for ::1 at 2020-03-07 13:15:03 +1000
+Processing by ListingController#index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:3
+  Rendering listing/index.html.erb within layouts/application
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers" WHERE "sneakers"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/listing/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 135], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listing/index.html.erb:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/listing/index.html.erb:4
+  Rendered listing/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.6ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/sneaker/delete?id=135" for ::1 at 2020-03-07 13:15:04 +1000
+Processing by ListingController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ktPgSyfP9T1UfpeGyIK0Bji6/RUdDO7J7zRncQ9r1h9TW4z9o8JavMvKqYJ9k5BHvYjHqRiuGg4tGaGb1uleQg==", "id"=>"135"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:7
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[36mSneaker Destroy (1.6ms)[0m  [1m[31mDELETE FROM "sneakers" WHERE "sneakers"."id" = $1[0m  [["id", 135]]
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 135], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[36mActiveStorage::Attachment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/listing_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listing_controller.rb:9
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 8b8ab088-16e3-4bb5-b9d3-c5183912745b) to Async(default) with arguments: #<GlobalID:0x00007fee1e3e2420 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/32>>
+Redirected to http://localhost:3000/user/show/4
+Completed 302 Found in 19ms (ActiveRecord: 5.0ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b] Performing ActiveStorage::PurgeJob (Job ID: 8b8ab088-16e3-4bb5-b9d3-c5183912745b) from Async(default) with arguments: #<GlobalID:0x00007fee1f947e78 @uri=#<URI::GID gid://marketplace/ActiveStorage::Blob/32>>
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started GET "/user/show/4" for ::1 at 2020-03-07 13:15:04 +1000
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   [1m[36mActiveStorage::Attachment Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 32], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"4"}
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   [1m[36mActiveStorage::Blob Destroy (1.6ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 32]]
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:7
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b]   ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering user/show.html.erb within layouts/application
+  Rendered user/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (3.9ms)
+Completed 200 OK in 56ms (Views: 47.9ms | ActiveRecord: 1.8ms)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b] [36m  S3 Storage (59.1ms) [0m[31mDeleted file from key: VJZd2cekk1JaFHqCFq9oHomF[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b] [36m  S3 Storage (59.8ms) [0m[31mDeleted files by key prefix: variants/VJZd2cekk1JaFHqCFq9oHomF/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8b8ab088-16e3-4bb5-b9d3-c5183912745b] Performed ActiveStorage::PurgeJob (Job ID: 8b8ab088-16e3-4bb5-b9d3-c5183912745b) from Async(default) in 136.96ms
+Started GET "/user/show/4/listing" for ::1 at 2020-03-07 13:15:07 +1000
+Processing by ListingController#index as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/listing_controller.rb:3
+  Rendering listing/index.html.erb within layouts/application
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers" WHERE "sneakers"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/listing/index.html.erb:3
+  Rendered listing/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sneaker/new" for ::1 at 2020-03-07 13:19:52 +1000
+Processing by SneakerController#new as HTML
+  Rendering sneaker/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/sneaker/new.html.erb:3
+  Rendered sneaker/new.html.erb within layouts/application (8.3ms)
+  Rendered devise/shared/_topnav.html.erb (2.0ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sneaker" for ::1 at 2020-03-07 13:19:53 +1000
+Processing by SneakerController#index as HTML
+  Rendering sneaker/index.html.erb within layouts/application
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/sneaker/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 122], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 123], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 121], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  Rendered sneaker/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 104ms (Views: 98.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ef3b4b1c0b29d55c6dcb9f7fd2388d26073cc387/airforce1.jpg" for ::1 at 2020-03-07 13:19:53 +1000
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dedca1733af14a537a61685f1a9352814ba1290/yeezy350zebra.jpeg" for ::1 at 2020-03-07 13:19:53 +1000
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8b4fbbe0ceec70e138ef17ea4d2c53b701079ee/990NB.jpeg" for ::1 at 2020-03-07 13:19:53 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ef3b4b1c0b29d55c6dcb9f7fd2388d26073cc387", "filename"=>"airforce1"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8b4fbbe0ceec70e138ef17ea4d2c53b701079ee", "filename"=>"990NB"}
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dedca1733af14a537a61685f1a9352814ba1290", "filename"=>"yeezy350zebra"}
+[36m  S3 Storage (1.7ms) [0m[34mGenerated URL for file at key: 9u8jGLjtHkMjvLjr9JssmyHB (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/9u8jGLjtHkMjvLjr9JssmyHB?response-content-disposition=inline%3B%20filename%3D%22airforce1.jpg%22%3B%20filename%2A%3DUTF-8%27%27airforce1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031953Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=44a2193b30946a80ae4f5e5476091584926e3326312ad98a364ff98ffd039fb4)[0m
+  [1m[36mActiveStorage::Blob Load (3.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/9u8jGLjtHkMjvLjr9JssmyHB?response-content-disposition=inline%3B%20filename%3D%22airforce1.jpg%22%3B%20filename%2A%3DUTF-8%27%27airforce1.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031953Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=44a2193b30946a80ae4f5e5476091584926e3326312ad98a364ff98ffd039fb4
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (4.3ms) [0m[34mGenerated URL for file at key: G6CMnLsFyrSHYsgAvyNeiVfQ (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/G6CMnLsFyrSHYsgAvyNeiVfQ?response-content-disposition=inline%3B%20filename%3D%22yeezy350zebra.jpeg%22%3B%20filename%2A%3DUTF-8%27%27yeezy350zebra.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031953Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=127ef3c43c7749bbd3b216d3b47f244d47a3193fd695b4eff83f58ddcdd348c9)[0m
+[36m  S3 Storage (1.5ms) [0m[34mGenerated URL for file at key: RL1JoY9vV1TRhQFbAf8QJvmC (https://marketplaceca.s3.ap-southeast-2.amazonaws.com/RL1JoY9vV1TRhQFbAf8QJvmC?response-content-disposition=inline%3B%20filename%3D%22990NB.jpeg%22%3B%20filename%2A%3DUTF-8%27%27990NB.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031953Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4a95a87639acb26f9523afcb36ff227b5fceb409cd0000eb35aefb39f1391d41)[0m
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/G6CMnLsFyrSHYsgAvyNeiVfQ?response-content-disposition=inline%3B%20filename%3D%22yeezy350zebra.jpeg%22%3B%20filename%2A%3DUTF-8%27%27yeezy350zebra.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031953Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=127ef3c43c7749bbd3b216d3b47f244d47a3193fd695b4eff83f58ddcdd348c9
+Redirected to https://marketplaceca.s3.ap-southeast-2.amazonaws.com/RL1JoY9vV1TRhQFbAf8QJvmC?response-content-disposition=inline%3B%20filename%3D%22990NB.jpeg%22%3B%20filename%2A%3DUTF-8%27%27990NB.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYU737BNET56BKYKQ%2F20200307%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20200307T031953Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4a95a87639acb26f9523afcb36ff227b5fceb409cd0000eb35aefb39f1391d41
+Completed 302 Found in 12ms (ActiveRecord: 1.0ms)
+
+
+Completed 302 Found in 17ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/sneaker/122" for ::1 at 2020-03-07 13:20:02 +1000
+Processing by SneakerController#show as HTML
+  Parameters: {"id"=>"122"}
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/sneaker_controller.rb:29
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/sneaker_controller.rb:30
+  Rendering sneaker/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 122], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/show.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/sneaker/show.html.erb:10
+  Rendered sneaker/show.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.4ms)
+Completed 200 OK in 53ms (Views: 46.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-07 13:20:08 +1000
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.6ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneaker" for ::1 at 2020-03-07 13:20:10 +1000
+Processing by SneakerController#index as HTML
+  Rendering sneaker/index.html.erb within layouts/application
+  [1m[36mSneaker Load (2.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/sneaker/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (2.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 122], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 123], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 121], ["record_type", "Sneaker"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/sneaker/index.html.erb:10
+  Rendered sneaker/index.html.erb within layouts/application (23.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:7
+  Rendered devise/shared/_topnav.html.erb (2.3ms)
+Completed 200 OK in 76ms (Views: 64.5ms | ActiveRecord: 8.0ms)
+
+
