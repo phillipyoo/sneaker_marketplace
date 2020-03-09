@@ -1,6 +1,6 @@
-<div class=”ui segment”>
+<div>
  <h3>Mailbox</h3>
- <div class=”ui list”>
+ <div>
   <div class=”item”>
    <% @conversations.each do |conversation| %>
    <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
@@ -16,9 +16,9 @@
   </div>
  </div>
 </div>
-<div class=”ui segment”>
 
-  <div class=”ui list”>
+<div>
+  <div>
    <% @users.each do |user| %>
     <% if user.id != current_user.id %>
   <% end %>

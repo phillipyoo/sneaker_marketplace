@@ -21,7 +21,7 @@
             <% if user_signed_in?%>
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><li><%= link_to "Profile", user_path(current_user.id)%></li></a></li>
+                        <li><a href="#"><%= link_to "Profile", user_path(current_user.id)%></a></li>
                         <li><a href="#"><%= link_to "My Wishlist", wishlists_path%></a></li>
                         <li><a href="#"><%= link_to "My Inbox", conversations_path %></a></li>
                         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

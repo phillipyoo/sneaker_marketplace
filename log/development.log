@@ -49016,3 +49016,48 @@ Processing by UserController#index as HTML
 Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2020-03-09 17:25:29 +1000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UserController#index as HTML
+  Rendering user/index.html.erb within layouts/application
+  Rendered user/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/devise/shared/_topnav.html.erb:21
+  Rendered devise/shared/_topnav.html.erb (26.8ms)
+Completed 200 OK in 795ms (Views: 769.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/conversations" for ::1 at 2020-03-09 17:25:33 +1000
+Processing by ConversationsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/phillipyoo/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering conversations/index.html.erb within layouts/application
+  [1m[36mConversation Load (1.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/views/conversations/index.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/conversations/index.html.erb:22
+  Rendered conversations/index.html.erb within layouts/application (15.3ms)
+  Rendered devise/shared/_topnav.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 50.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/conversations/1/messages" for ::1 at 2020-03-09 17:25:34 +1000
+Processing by MessagesController#index as HTML
+  Parameters: {"conversation_id"=>"1"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:3
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 1]]
+  ↳ app/controllers/messages_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:17
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/messages/index.html.erb:7
+  Rendered messages/index.html.erb within layouts/application (11.7ms)
+  Rendered devise/shared/_topnav.html.erb (1.0ms)
+Completed 200 OK in 91ms (Views: 53.4ms | ActiveRecord: 5.9ms)
+
+
