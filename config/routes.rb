@@ -35,6 +35,11 @@ Rails.application.routes.draw do
 
   #Remove sneaker from wishlist
   delete '/sneaker/:id', to: 'wishlist#destroy', as:'remove_from_wishlist'
+
+  #Messages within conversation
+  resources :conversations do
+    resources :messages
+  end
   
 
 end

@@ -5,7 +5,7 @@
         <p><%="#{sneaker.model}"%><p>
         <p><%="#{sneaker.brand}"%><p>
         <p><%="size: #{sneaker.size}"%><p>
-        <p><%="$ #{sneaker.price}"%><p>
+        <p><%= number_to_currency sneaker.price %><p>
     <%=link_to "Remove", remove_from_listings_path(:id => sneaker), method: "delete" %>
     
     <%end%>

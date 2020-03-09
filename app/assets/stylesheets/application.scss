@@ -15,18 +15,28 @@
 
  @import "bootstrap";
 
-    .top-nav {
-        text-align: end;
-    }
-
-    #nav-text{
-        span {
-            padding: 10px;
-        }
+    h2 {
+        text-align: center;
     }
 
     .container {
         min-width:100vw;
     }
+
+    #nav-text {
+        flex-wrap: flex;
+        margin-left: 50px;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    .dropdown {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+
 
 

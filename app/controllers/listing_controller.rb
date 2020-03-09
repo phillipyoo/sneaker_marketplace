@@ -8,7 +8,6 @@ class ListingController < ApplicationController
         item_id = Sneaker.find(params[:id])
         Wishlist.where(sneaker_id: params[:id]).destroy_all
         item_id.destroy
-        
         redirect_to user_path(user)
     end
 

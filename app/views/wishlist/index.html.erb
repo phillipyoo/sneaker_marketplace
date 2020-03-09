@@ -4,10 +4,9 @@
 <% sneaker = Sneaker.find(item.sneaker_id)%>
   <%= image_tag sneaker.picture if sneaker.picture.attached? %>
 
-    <p> <%="#{sneaker.model}"%> </p>
-    <p> <%="#{sneaker.price}"%> </p>
-    <p> <%="#{sneaker.size}"%> </p>
-    <p><%= link_to "Remove", remove_from_wishlist_path(:id => sneaker.id), method: "delete"%></p>
-
+    <p><%="#{sneaker.model}"%> <%= link_to "Remove", remove_from_wishlist_path(:id => sneaker.id), method: "delete"%></p>
+    <p><%= number_to_currency sneaker.price%></p>
+    <p><%="#{sneaker.size}"%></p>
 <%end%>
+
 

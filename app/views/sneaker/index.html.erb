@@ -1,16 +1,10 @@
 <h2>Sneaker list</h2>
 
-<table>
 <% @sneaker.each do |sneaker| %>
-        
-    <th><%= "#{sneaker.brand}"%></th>
-    <tr>
-        <td><%= link_to sneaker.model, sneaker_path(sneaker.id)%></td>
-    </tr>
-        <td><%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%></td>
-    <tr>
-        <td><%= "$#{sneaker.price} size: #{sneaker.size}"%>
-    </tr>
+    <%= "#{sneaker.brand}"%>
+    <p><%= link_to sneaker.model, sneaker_path(sneaker.id)%></p>
+    <p><%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%></p>
+    <p><%= number_to_currency sneaker.price, size: "#{sneaker.size}"%></p>
 <% end %>
 
-</table>
+

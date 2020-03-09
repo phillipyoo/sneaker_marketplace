@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :sneakers
   has_many :listings
   has_many :wishlists
+
+  has_many :conversations, :foreign_key => :sender_id
 end

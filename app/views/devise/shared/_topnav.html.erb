@@ -1,21 +1,35 @@
 <nav>
-    <div class="top-nav">
-        <p id="nav-text">
-            <span><%= link_to "Home", root_path%></span>
-            <span><%= link_to "Sell", new_sneaker_path%></span>
-            <span><%= link_to "New Releases", sneakers_path%></span>
-            <% if user_signed_in? %>
-                <span><%= link_to "Account", user_path(current_user.id)%></span>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-            <% else %>
+    <header class="top-nav row align-items-start">
+        <div class="col text-left">
+            <span id ="nav-text"><%= link_to "Home", root_path%></span>
+            <span id ="nav-text"><%= link_to "Sell", new_sneaker_path%></span>
+            <span id ="nav-text"><%= link_to "New Releases", sneakers_path%></span>
+
+        </div>
+    
+        <div>
+            <%= form_tag(sneakers_path, method: :get) do%>
+            <%= text_field_tag(:search, params[:search])%>
+            <%= submit_tag("Search")%>
+            <%end%>
+
+
+        </div>
+  
+        
+        <div class="dropdown">
+            <% if user_signed_in?%>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><li><%= link_to "Profile", user_path(current_user.id)%></li></a></li>
+                        <li><a href="#"><%= link_to "My Wishlist", wishlists_path%></a></li>
+                        <li><a href="#"><%= link_to "My Inbox", conversations_path %></a></li>
+                        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                    </ul>
+            <%else %>
                 <%= link_to "Login/Signup", new_user_session_path %>
             <% end %>
-            </span>
-        </p>
-      
-        <%= form_tag(sneakers_path, method: :get) do%>
-        <%= text_field_tag(:search, params[:search])%>
-        <%= submit_tag("Search")%>
-<%end%>
-    </div>
+        </div>
+    </header>
 </nav>
+
