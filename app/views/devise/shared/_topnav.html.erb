@@ -29,6 +29,7 @@
                         <li><a href="#"><%= link_to "Profile", user_path(current_user.id)%></a></li>
                         <li><a href="#"><%= link_to "My Wishlist", wishlists_path%></a></li>
                         <li><a href="#"><%= link_to "My Inbox", conversations_path %></a></li>
+                        
                         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                     </ul>
             <%else %>

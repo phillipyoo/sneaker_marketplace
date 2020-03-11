@@ -11,6 +11,9 @@ https://sneaker-marketplace.herokuapp.com/
 https://github.com/phillipyoo/sneaker_marketplace
 
 #### Purpose
-Knowing that products are now domestically available users can easily browse and sell sneakers and see what's available on the website. 
+Knowing that products are now domestically available users can easily browse and sell sneakers and see what's available on the website. Creating a consumer-to-consumer(C2C) marketplace app will hopefully build a strong presence amongst sneakerhead communities in Australia.
+
+#### Features
+
 
 

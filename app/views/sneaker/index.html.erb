@@ -5,7 +5,7 @@
       <div class="row">
         <% @sneaker.each do |sneaker| %>
          <div class="card">
-            <p><%= image_tag sneaker.picture, width:240, height:220 if sneaker.picture.attached?%></p>
+            <p><%= image_tag sneaker.picture, class:"thumbnail-img" if sneaker.picture.attached?%></p>
             <p class="p-3 mb-2 bg-dark text-white"><%="#{sneaker.brand}"%></p>
             <p class="p-3 mb-2 bg-light text-dark">
                <%= link_to sneaker.model, sneaker_path(sneaker.id), id:"model-text"%>
