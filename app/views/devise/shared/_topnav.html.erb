@@ -1,10 +1,15 @@
 <nav>
     <header class="top-nav row align-items-start">
         <div class="col text-left">
-            <span id ="nav-text"><%= link_to "Home", root_path%></span>
-            <span id ="nav-text"><%= link_to "Sell", new_sneaker_path%></span>
-            <span id ="nav-text"><%= link_to "New Releases", sneakers_path%></span>
+            <span><%= link_to "Home", root_path, class: 'link-to-text-color' %></span>
+            <%if user_signed_in?%>
+            <span><%= link_to "Sell", new_sneaker_path, class: 'link-to-text-color' %></span>
+            <%end%>
+            <span><%= link_to "New Releases", sneakers_path, class: 'link-to-text-color' %></span>
+        </div>
 
+        <div class="col text-center">
+            <%=link_to (image_tag "Logo.jpg", class:"logo"),root_path %></p>
         </div>
     
         <div>

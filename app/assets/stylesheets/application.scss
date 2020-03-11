@@ -17,16 +17,29 @@
 
     h2 {
         text-align: center;
+        font-family: 'Sen', sans-serif;
+        font-style: italic;
+        padding: 20px;
     }
 
     .container {
         min-width:100vw;
     }
 
-    #nav-text {
+
+    .link-to-text-color{
         flex-wrap: flex;
         margin-left: 50px;
+        color:black;   
     }
+
+    #model-text {
+        color:black;
+    }
+    .dropdown-toggle {
+        color:black;
+    }
+
 
     nav {
         margin-top: 20px;
@@ -36,6 +49,121 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+  
+    .card {
+            text-align:center;
+            min-width:24%;
+            align-content: space-between;
+            margin:auto;
+            margin-bottom: 50px;
+            border:none;
+
+         
+            
+            
+            .image {
+                padding-top:20px;
+            }
+            
+    }
+
+    .logo {
+       
+        height:50px;
+        padding-right:50px;
+    }
+
+    .background {
+        position:relative;
+    }
+
+    #splash-img {
+       width:80vw;
+       height:90vh;
+       margin:auto;
+       display: block;
+       padding-top:10px;
+    }
+    
+    .box-1 {
+            position: absolute;
+            top:70px;
+            left:30px;
+            background-color: rgba(0, 0, 0, 0.404);
+            color: white;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 1%;
+
+            p{
+                font-size: 2.5rem;
+                font-family: 'Sen', sans-serif;
+                font-style: italic;
+            }
+          }
+    
+    .box-2 {
+        position: absolute;
+        bottom:70px;
+        right:100px;
+        background-color: rgba(0, 0, 0, 0.404);
+        color: white;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1%;
+
+        p{
+            font-size: 1rem;
+            font-family: 'Sen', sans-serif;
+            font-style: italic;
+        }
+
+    }
+
+    #sale-page {
+        width:30vw;
+        height:90vh;
+        margin:auto;
+        display: block;
+        
+        
+    }
+
+    .sale-form {
+        position: absolute;
+        top:60px;
+        left:44%;
+        
+        label {
+            display: flex;
+            flex-direction: row;
+            line-height: 50px;
+            margin:auto;
+            font-size: 20px;
+            
+        }
+    }
+    
+    #submit {
+        margin-top: 40px;
+    }
+
+
+    .d-block{
+        width:80vw;
+        height:90vh;
+    }
+
+
+
+
+
+
+
+
+  
+
+ 
 
 
 

@@ -1,30 +1,32 @@
 <h2>Sell a pair of kicks</h2>
-<div>
-<% if user_signed_in? %>
-    <%= form_with model: @sneaker, url: sell_sneaker_path do |form|%>
-        <%= form.label :brand %>
-        <%= form.select :brand, ["Air Jordan","Nike","Adidas","Balenciaga","Puma","New Balance","Reebok"] %>
-        <br />
-        
-        <%= form.label :model %>
-        <%= form.text_field :model %>
-        <br />
-        
-        <%= form.label :price %>
-        <%= form.number_field :price %>
-        <br />
 
-        <%= form.label :size %>
-        <%= form.number_field :size %>
-        <br />
-        
-        <%= form.label :picture%>
-        <%= form.file_field :picture, accept: "image/png, image/gif, image/jpeg, image/jpg"%>
-        <br />
-        <%= form.submit "Submit", class: "btn btn-success"%>
-        <%=%>
+<div class="background">
+    <%=image_tag("Sale-page.jpg", id:"sale-page")%>
+    <div class="sale-form">
+    <% if user_signed_in? %>
+        <%= form_with model: @sneaker, url: sell_sneaker_path do |form|%>
+            <%= form.label :brand %>
+            <%= form.select :brand, ["Air Jordan","Nike","Adidas","Balenciaga","Puma","New Balance","Reebok", "Vans", "Converse"] %>
+            <br />
+            
+            <%= form.label :model %>
+            <%= form.text_field :model %>
+            <br />
+            
+            <%= form.label :price %>
+            <%= form.number_field :price, min:0, max:20000 %>
+            <br />
+
+            <%= form.label :size %>
+            <%= form.number_field :size, min: 1, max: 20 %>
+            <br />
+            
+            <%= form.label :picture%>
+            <%= form.file_field :picture, accept: "image/png, image/gif, image/jpeg, image/jpg"%>
+            <br />
+            <p id="submit"><%= form.submit "Submit", class: "btn btn-success"%></p>
+            
+        <% end %>
     <% end %>
-<% end %>
-
-
+    </div>
 </div>

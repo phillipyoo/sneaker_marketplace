@@ -1,10 +1,20 @@
 <h2>Sneaker list</h2>
 
-<% @sneaker.each do |sneaker| %>
-    <%= "#{sneaker.brand}"%>
-    <p><%= link_to sneaker.model, sneaker_path(sneaker.id)%></p>
-    <p><%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%></p>
-    <p><%= number_to_currency sneaker.price, size: "#{sneaker.size}"%></p>
-<% end %>
+
+   <div class="container">
+      <div class="row">
+        <% @sneaker.each do |sneaker| %>
+         <div class="card">
+            <p><%= image_tag sneaker.picture, width:240, height:220 if sneaker.picture.attached?%></p>
+            <p class="p-3 mb-2 bg-dark text-white"><%="#{sneaker.brand}"%></p>
+            <p class="p-3 mb-2 bg-light text-dark">
+               <%= link_to sneaker.model, sneaker_path(sneaker.id), id:"model-text"%>
+            </p>
+            <p class="p-3 mb-2 bg-dark text-white"><%= number_to_currency sneaker.price%> <%= "(size: #{sneaker.size})"%></p>
+
+         </div>
+        <% end %>
+      </div>
+   </div>
 
 

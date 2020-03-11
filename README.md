@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Identification of the problem you are trying to solve by building this particular marketplace app and why it needs solving.
 
-Things you may want to cover:
+Compared to America there are little to none sneaker reselling marketplaces present in Australia. For those sneakerheads living in Australia wanting to purchase a pair of premium sneakers that aren't available in Australia are more than likely to go the extra yard and purchase sneakers overseas and along with that a large sum in international shipping fees. With the Australian exchange rate plummeting at an all time low purchasing a pair of sneakers in America can be a bit overwhelming and financially difficult. 
 
-* Ruby version
+### Heroku 
+https://sneaker-marketplace.herokuapp.com/
 
-* System dependencies
+### Github 
+https://github.com/phillipyoo/sneaker_marketplace
 
-* Configuration
+#### Purpose
+Knowing that products are now domestically available users can easily browse and sell sneakers and see what's available on the website. 
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
