@@ -5,11 +5,9 @@
       <div class="row">
         <% @sneaker.each do |sneaker| %>
          <div class="card">
-            <p><%= image_tag sneaker.picture, class:"thumbnail-img" if sneaker.picture.attached?%></p>
+            <p><%= link_to (image_tag sneaker.picture, class:"thumbnail-img" if sneaker.picture.attached?), sneaker_path(sneaker.id)%></p>
             <p class="p-3 mb-2 bg-dark text-white"><%="#{sneaker.brand}"%></p>
-            <p class="p-3 mb-2 bg-light text-dark">
-               <%= link_to sneaker.model, sneaker_path(sneaker.id), id:"model-text"%>
-            </p>
+            <p class="p-3 mb-2 bg-light text-dark"><%="#{sneaker.model}"%></p>
             <p class="p-3 mb-2 bg-dark text-white"><%= number_to_currency sneaker.price%> <%= "(size: #{sneaker.size})"%></p>
 
          </div>

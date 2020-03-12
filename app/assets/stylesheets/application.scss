@@ -33,9 +33,6 @@
         color:black;   
     }
 
-    #model-text {
-        color:black;
-    }
     .dropdown-toggle {
         color:black;
     }
@@ -57,9 +54,6 @@
             margin:auto;
             margin-bottom: 50px;
             border:none;
-
-         
-            
             
             .image {
                 padding-top:20px;
@@ -120,29 +114,57 @@
 
     }
 
-    #sale-page {
+    .box-3 {
+        position: absolute;
+        top:30%;
+        left:50px;
+        background-color: rgba(0, 0, 0, 0.404);
+        color: white;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1%;
+
+            p{
+                font-size: 1.5rem;
+                font-family: 'Sen', sans-serif;
+                font-style: italic;
+                
+            }
+          }
+    
+
+    #sale-page,#login-page {
         width:30vw;
         height:90vh;
         margin:auto;
-        display: block;
-        
-        
+        display: block;  
     }
 
     .sale-form {
         position: absolute;
-        top:60px;
+        top:20px;
         left:44%;
         
         label {
             display: flex;
             flex-direction: row;
             line-height: 50px;
-            margin:auto;
             font-size: 20px;
-            
         }
     }
+
+    .login-form {
+        position: absolute;
+        top:100px;
+        left:44%;
+        
+        label {
+            display: flex;
+            flex-direction: row;
+            line-height: 40px;
+            font-size: 20px;
+    }
+}
     
     #submit {
         margin-top: 40px;
@@ -172,10 +194,40 @@
       width:240px;
       height:220px;
   }
-  
-   
-  
 
+  #image-2 {
+    width:80%;
+    height:90%;
+    margin:auto;
+    display: block;
+  }
+  
+  .link-to-text-color-2 {
+      color:white;
+  }
+
+  .listing-items {
+    background-color: rgba(0, 0, 0, 0.208);
+    color: white;
+    padding:40px;
+    
+    p{
+        font-size: 1rem;
+        font-family: 'Sen', sans-serif;
+        font-style: italic;
+        text-align:center;
+    }
+  }
+
+  #listing-wrapper {
+      display:flex;
+      flex-direction: row;
+      
+
+  }
+  #listing-card {
+      margin:50px;
+  }
 
 
 

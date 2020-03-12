@@ -1,11 +1,21 @@
 <h2>My Listing</h2>
 
-    <% @user.sneakers.each do |sneaker| %>
-        <p><%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%><p>
-        <p><%="#{sneaker.model}"%><p>
-        <p><%="#{sneaker.brand}"%><p>
-        <p><%="size: #{sneaker.size}"%><p>
-        <p><%= number_to_currency sneaker.price %><p>
-    <%=link_to "Remove", remove_from_listings_path(:id => sneaker), method: "delete" %>
-    
+<div class="container">
+    <div id="listing-wrapper">
+        <% @user.sneakers.each do |sneaker| %>
+        <div id="listing-card">
+            <div class="listing-items">
+            <%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%>
+            
+            <p><%="#{sneaker.brand}"%><p>
+            <p><%="#{sneaker.model}"%><p>
+            <p><%="size: #{sneaker.size}"%><p>
+            <p><%= number_to_currency sneaker.price %><p>
+            <%=link_to "Remove", remove_from_listings_path(:id => sneaker), method: "delete" %>
+            </div>
+        </div>
     <%end%>
+    </div>
+</div>
+    
+</div>

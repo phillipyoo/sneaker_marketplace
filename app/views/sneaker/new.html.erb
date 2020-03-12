@@ -1,7 +1,7 @@
 <h2>Sell a pair of kicks</h2>
 
 <div class="background">
-    <%=image_tag("Sale-page.jpg", id:"sale-page")%>
+    <%=image_tag("Sell-img.jpg", id:"sale-page")%>
     <div class="sale-form">
     <% if user_signed_in? %>
         <%= form_with model: @sneaker, url: sell_sneaker_path do |form|%>
@@ -22,7 +22,7 @@
             <br />
             
             <%= form.label :picture%>
-            <%= form.file_field :picture, accept: "image/png, image/gif, image/jpeg, image/jpg"%>
+            <%= form.file_field :picture, accept: "image/png, image/gif, image/jpeg, image/jpg",required:true%>
             <br />
             <p id="submit"><%= form.submit "Submit", class: "btn btn-success"%></p>
             

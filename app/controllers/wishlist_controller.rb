@@ -1,6 +1,7 @@
 class WishlistController < ApplicationController
     def index
         @wishlist_items = current_user.wishlists
+
     end
 
     def add
@@ -9,6 +10,8 @@ class WishlistController < ApplicationController
         
         item = user.wishlists.create(
             sneaker_id: params[:id]
+            
+
         )
         if item.valid? && item.save
             flash[:notice] = "Added to wishlist"
@@ -28,4 +31,10 @@ class WishlistController < ApplicationController
         redirect_to wishlists_path
     
     end
+
+    protected
+    def wishlist_params
+        params.require(:sneaker).permit(:brand,:model,:sneaker_id,:search,:picture)
+    end 
+
 end

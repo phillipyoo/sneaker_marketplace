@@ -17,7 +17,8 @@ class UserController < ApplicationController
             first_name: params[:first_name],
             last_name: params[:last_name],
             email: params[:email],
-            location: params[:location]
+            location: params[:location],
+            contact: params[:contact]
         )
 
         if profile.valid? && profile.save

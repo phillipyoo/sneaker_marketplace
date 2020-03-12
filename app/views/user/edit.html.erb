@@ -21,6 +21,11 @@
             <%= f.text_field :location, value: current_user.location, autofocus: true, autocomplete: "location" %>
         </div>
 
+        <div class="field">
+            <%= f.label :contact %><br />
+            <%= f.number_field :contact, value: current_user.contact, autofocus: true, autocomplete: "contact" %>
+        </div>
+
         <div>
             <%= f.submit "Edit"%>
            
