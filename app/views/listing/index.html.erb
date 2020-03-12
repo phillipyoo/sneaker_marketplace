@@ -5,8 +5,7 @@
         <% @user.sneakers.each do |sneaker| %>
         <div id="listing-card">
             <div class="listing-items">
-            <%= image_tag sneaker.picture, width:150, height:120 if sneaker.picture.attached?%>
-            
+            <%= image_tag sneaker.picture if sneaker.picture.attached?%>
             <p><%="#{sneaker.brand}"%><p>
             <p><%="#{sneaker.model}"%><p>
             <p><%="size: #{sneaker.size}"%><p>

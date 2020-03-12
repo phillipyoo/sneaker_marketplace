@@ -17,9 +17,13 @@
       <%if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>  
-      
       <%= render "/devise/shared/topnav" %>
-      <%= yield %>
+        <%if !user_signed_in? || !current_user.block%>
+          <%= yield %>
+          <%else%>
+          
+          <h2>Sorry, you're blocked</h2>
+        <%end%>
     </div>
   </body>
 </html>

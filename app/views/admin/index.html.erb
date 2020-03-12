@@ -1,0 +1,27 @@
+<h2>Manage Profiles</h2>
+
+<div class="container">
+    <div id="listing-wrapper">
+        <%@user.each do |user|%>
+        <div id="listing-card">
+            <div class="listing-items">
+            <p><%= image_tag ("/assets/default")%></p><br />
+            <p><%= "#{user.first_name} #{user.last_name}" %></p>
+            <p><%= link_to "See all listings", listings_path(user.id)%>
+                <%if user.block?%>
+                    <p>Blocked</p>
+                
+                <%else !user.block%>
+                    <p><%= link_to "Block user", edit_user_path(user)%>
+                <%end%>
+            </div>
+        </div>  
+        <%end%>
+    </div>
+</div>
+
+
+
+
+
+    

@@ -1,7 +1,7 @@
 <h2>Sell a pair of kicks</h2>
 
 <div class="background">
-    <%=image_tag("Sell-img.jpg", id:"sale-page")%>
+    <%=image_tag("Sell-img.jpg", id:"login-page")%>
     <div class="sale-form">
     <% if user_signed_in? %>
         <%= form_with model: @sneaker, url: sell_sneaker_path do |form|%>

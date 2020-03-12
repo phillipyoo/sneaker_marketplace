@@ -1,0 +1,13 @@
+    <%= form_with model:@user, url:update_user_path, method: :patch do|f| %>
+        
+        <div class="field">
+            <%= f.hidden_field :id, value: @user.id %>
+        </div>
+
+        <div>
+            <%= f.label "Do you want to block this person?" %><br />
+        </div>
+        <div>
+            <%= f.submit "Yes"%>
+        </div>
+    <%end%>

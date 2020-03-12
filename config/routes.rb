@@ -27,17 +27,28 @@ Rails.application.routes.draw do
   #Remove sneakers from listing
   delete '/sneaker/delete', to: 'listing#destroy', as: "remove_from_listings"
 
+  
   #Show wishlist
   get '/wishlist', to: 'wishlist#index', as: 'wishlists'
-
+  
   #Add sneakers to wishlist
   post '/wishlist', to: 'wishlist#add', as: 'add_to_wishlist'
-
+  
   #Remove sneaker from wishlist
   delete '/sneaker/:id', to: 'wishlist#destroy', as:'remove_from_wishlist'
-
+  
   #Administration
-  get '/admin', to: 'user#admin', as: 'administration'
+  get '/admin', to: 'admin#index', as: 'administration'
+  
+  #Block user
+  get '/admin/edit/:id', to: 'admin#edit', as: 'edit_user'
+  patch '/admin/edit', to: 'admin#update', as: "update_user"
+
+  #Unblock user
+  # get '/admin/edit/:id', to: 'admin#adit', as: 'clear_user'
+  # patch '/admin/edit', to: 'admin#unblock', as: 'unblock_user'
+
+
 
   #Messages within conversation
   resources :conversations do

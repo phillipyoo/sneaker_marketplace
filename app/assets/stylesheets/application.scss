@@ -26,7 +26,6 @@
         min-width:100vw;
     }
 
-
     .link-to-text-color{
         flex-wrap: flex;
         margin-left: 50px;
@@ -36,7 +35,6 @@
     .dropdown-toggle {
         color:black;
     }
-
 
     nav {
         margin-top: 20px;
@@ -57,12 +55,10 @@
             
             .image {
                 padding-top:20px;
-            }
-            
+            }   
     }
 
     .logo {
-       
         height:50px;
         padding-right:50px;
     }
@@ -128,12 +124,11 @@
                 font-size: 1.5rem;
                 font-family: 'Sen', sans-serif;
                 font-style: italic;
-                
             }
           }
     
 
-    #sale-page,#login-page {
+    #login-page {
         width:30vw;
         height:90vh;
         margin:auto;
@@ -163,13 +158,12 @@
             flex-direction: row;
             line-height: 40px;
             font-size: 20px;
+        }
     }
-}
     
     #submit {
         margin-top: 40px;
     }
-
 
     .d-block{
         width:80vw;
@@ -184,6 +178,7 @@
     display: block;
     padding-top:80px;
   }
+
   .content {
     position: absolute;
     top:22%;
@@ -210,6 +205,13 @@
     background-color: rgba(0, 0, 0, 0.356);
     color: white;
     padding:40px;
+    padding-top: 20px;
+
+    img {
+        margin: 20px auto 30px ;
+        width:200px;
+        height:200px;
+    }
     
     p{
         font-size: 1rem;
@@ -225,14 +227,8 @@
 
   }
   #listing-card {
-      margin:50px;
+      margin:20px;
   }
 
-
-  
-
  
-
-
-
-
+  
