@@ -8,6 +8,13 @@ class UserController < ApplicationController
     end
     
 
+    def admin
+        @user = User.all
+        @sneaker = Sneaker.all
+        
+
+    end 
+
     def edit
     end
 

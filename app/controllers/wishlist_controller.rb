@@ -5,13 +5,10 @@ class WishlistController < ApplicationController
     end
 
     def add
-        
         user = current_user
         
         item = user.wishlists.create(
             sneaker_id: params[:id]
-            
-
         )
         if item.valid? && item.save
             flash[:notice] = "Added to wishlist"

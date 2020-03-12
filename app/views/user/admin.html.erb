@@ -1,0 +1,22 @@
+<h2>Manage Profiles</h2>
+
+<div class="container">
+    <div id="listing-wrapper">
+        <%@user.each do |user|%>
+    <div id="listing-card">
+        <div class="listing-items">
+        <%= image_tag ("/assets/default")%>
+        <p><%= "#{user.first_name}."%></p>
+        <p><%= "#{user.last_name}"%></p>
+        <p><%= link_to "See all listings", listings_path(user.id)%>
+        </div>
+    </div>  
+    <%end%>
+    </div>
+</div>
+
+
+
+
+
+    

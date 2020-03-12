@@ -1,8 +1,6 @@
 class SneakerController < ApplicationController
     def index
         @sneaker = Sneaker.search(params[:search])
-
-       
     end
 
     def new

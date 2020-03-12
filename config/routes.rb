@@ -36,6 +36,9 @@ Rails.application.routes.draw do
   #Remove sneaker from wishlist
   delete '/sneaker/:id', to: 'wishlist#destroy', as:'remove_from_wishlist'
 
+  #Administration
+  get '/admin', to: 'user#admin', as: 'administration'
+
   #Messages within conversation
   resources :conversations do
     resources :messages
