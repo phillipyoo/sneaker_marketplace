@@ -47,9 +47,27 @@ The target audience is a majority of sneakerheads based in Australia who want to
 ### User stories 
 ![Alt Text](app/assets/images/userstories.jpg)
 
+| As a  | I want to | So that I  |
+| ------------- |:-------------:| -----:|
+| CEO     | create an app | can save the trouble of consumers coming instore |
+| CEO      | create an online marketplace   |   expand my business |
+| Sneakerhead | purchase sneakers online  | don't have wait to in line to buy limited edition sneakers    |
+| Reseller | sell a pair of sneakers  |   can make a profit out of it |
+| Sneakerhead | buy sneakers | collect premium sneakers |
+| Social media influencer | buy a pair of sneakers | can showcase them on social media |
+| Parent| buy a pair of sneakers for my kid's birthday| can surprise him |
+| Underground rapper |  buy a pair of sneakers  |  wear it at my concert |
+
+
 ### Wireframes 
 ![Alt Text](app/assets/images/wireframe-1.png)
 ![Alt Text](app/assets/images/wireframe-2.png)
+![Alt Text](app/assets/images/wireframe-3.png)
+![Alt Text](app/assets/images/wireframe-4.png)
+![Alt Text](app/assets/images/wireframe-5.png)
+![Alt Text](app/assets/images/wireframe-6.png)
+![Alt Text](app/assets/images/wireframe-7.png)
+
 
 ### ERD
 ![Alt Text](app/assets/images/ERD-marketplace.png)
