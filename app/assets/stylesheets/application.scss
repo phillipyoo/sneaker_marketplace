@@ -206,6 +206,7 @@
     color: white;
     padding:40px;
     padding-top: 20px;
+    
 
     img {
         margin: 20px auto 30px ;
@@ -222,8 +223,10 @@
   }
 
   #listing-wrapper {
-      display:flex;
-      flex-direction: row;
+    display:flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    width:100vw;
 
   }
   #listing-card {
