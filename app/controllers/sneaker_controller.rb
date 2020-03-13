@@ -3,10 +3,12 @@ class SneakerController < ApplicationController
         @sneaker = Sneaker.search(params[:search])
     end
 
+    # Create new sneaker
     def new
         @sneaker = Sneaker.new
     end
 
+    # Validates each attribute before saving it to the database 
     def sell
         user = current_user
         @sneaker = user.sneakers.create(

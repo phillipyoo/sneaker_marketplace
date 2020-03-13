@@ -1,9 +1,13 @@
 class ConversationsController < ApplicationController
-    before_action :authenticate_user!
+    
+  # Needs to be signed in to perform action
+  before_action :authenticate_user!
     def index
      @users = User.all
      @conversations = Conversation.all
      end
+
+    # Validating if conversation between a recipient and sender exists
     def create
      if Conversation.between(params[:sender_id],params[:recipient_id])
        .present?

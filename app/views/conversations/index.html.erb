@@ -1,7 +1,7 @@
 <div class=”ui segment”>
  <h2>Inbox</h2>
 
- <div class=”ui list”>
+ <div>
   <div class=”item”>
    <% @conversations.each do |conversation| %>
    <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
@@ -10,25 +10,22 @@
     <% else %>
       <% recipient = User.find(conversation.sender_id) %>
     <% end %>
+      <table>
+      
+        <tr>
+          <td><%= link_to recipient.first_name, conversation_messages_path(conversation)%></td>
+          <td><%= conversation.messages.order("created_at DESC")[0].body%></td>
+        </tr>
 
-
-  <table>
-    <tr>
-      <td><%= link_to recipient.first_name, conversation_messages_path(conversation)%></td>
-      <td><%= conversation.messages.order("created_at DESC")[0].body%></td>
-    </tr>
-
-  </table>
-
-  
-
+      </table>
    <% end %>
   <% end %>
   </div>
  </div>
 </div>
-<div class=”ui segment”> 
-  <div class=”ui list”>
+<div> 
+
+  <div>
    <% @users.each do |user| %>
     <% if user.id != current_user.id %>
   <% end %>

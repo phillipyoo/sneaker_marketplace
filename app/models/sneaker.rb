@@ -2,6 +2,7 @@ class Sneaker < ApplicationRecord
     belongs_to :user
     has_one_attached :picture
 
+    #Implementing "fuzzy" allows user to easily search a sneaker without typing in the exact words
     def self.search(search)
         if search
             result = self.where("LOWER(brand) LIKE ?", "%#{search.downcase}%")

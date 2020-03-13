@@ -3,6 +3,7 @@ class ListingController < ApplicationController
         @user = User.find(params[:id])
     end
 
+    # Verifying a pair of sneakers and querying to whether to delete sneaker from wishlist
     def destroy
         user = current_user
         item_id = Sneaker.find(params[:id])

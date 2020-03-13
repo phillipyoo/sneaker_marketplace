@@ -10,6 +10,7 @@ class UserController < ApplicationController
     def edit
     end
 
+    # Validates params and saves data once everything is verified
     def update
         profile = current_user
         profile.update(

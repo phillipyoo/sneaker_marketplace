@@ -3,7 +3,9 @@ class MessagesController < ApplicationController
         @conversation = Conversation.find(params[:conversation_id])
     end
     
+    
     def index
+    #Created a variable to only display 10 messages at a time 
       @messages = @conversation.messages
         if @messages.length > 10
         @over_ten = true

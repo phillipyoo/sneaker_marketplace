@@ -102,7 +102,23 @@ The code above will only allow user access to the ``Sell`` section once it verif
 * there are many messages that can belong in a conversation with a user 
 * conversations belongs to a recipient and sender 
 
-``
+### Discuss the database relations to be implemented in your application
+
+`User_id's` are passed into sneaker table as a foreign key where `sneaker_id` is then further called to listing table when a user posts a pair of sneakers onto the market.
+
+If users choose to store a pair of sneakers into the wishlist the `sneaker_id` is passed into wishlist as a foreign key `wishlist_id`.
+
+Users can internally message each other via conversations. For the recipient and sender's conversation to be co-existent bother user's `user_id ` needs to be passed through in order for the function to work.
+
+
+
+### Describe the way tasks are allocated and tracked in your project
+
+![Alt Text](app/assets/images/Trello-1.png)
+![Alt Text](app/assets/images/Trello-2.png)
+![Alt Text](app/assets/images/Trello-3.png)
+
+
 
 
 

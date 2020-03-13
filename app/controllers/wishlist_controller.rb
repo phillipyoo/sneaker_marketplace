@@ -4,6 +4,7 @@ class WishlistController < ApplicationController
 
     end
 
+    #Allows users to add sneakers to wishlist
     def add
         user = current_user
         
@@ -19,6 +20,7 @@ class WishlistController < ApplicationController
         end
     end
 
+    # Allows users to remove sneakers from wishlist
     def destroy
         user = current_user
         wishlist = user.wishlists

@@ -4,8 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # User can have many wishlist items, listings, sneakers and conversations
   has_many :wishlists, dependent: :destroy
   has_many :sneakers, dependent: :destroy
   has_many :listings, dependent: :destroy
   has_many :conversations, :foreign_key => :sender_id, dependent: :destroy
+
+
 end

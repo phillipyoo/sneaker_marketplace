@@ -3,6 +3,7 @@ class AdminController < ApplicationController
         @user = User.find(params[:id])
     end
 
+    #Verifying a user and querying if user is blocked or unblocked
     def update
         p params[:id]
         user = User.find(params[:user][:id])
