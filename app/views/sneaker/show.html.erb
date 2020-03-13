@@ -6,11 +6,11 @@
     <h4><%= "#{@sneaker.model}"%></h4>
     <h6><%= "#{@user.location}"%></h6>
         <p><%= "#{number_to_currency @sneaker.price}"%></p>
-        <p><%= "Ad posted: #{@sneaker.updated_at}"%><p>
+        <p><%= "Ad posted: #{@sneaker.updated_at.to_time.strftime('%B %e')}"%><p>
     <%if user_signed_in?%>   
-        <%if current_user.admin?%> 
+        <%if current_user.admin || current_user.id == @sneaker.user_id%> 
             <p><%= "Seller: #{@user.first_name} #{@user.last_name}"%></p>
-        <%else !current_user.admin%>
+        <%else %>
             <p><%= "Seller: #{@user.first_name} #{@user.last_name}"%></p>
             <p><%=link_to "Add to wishlist", add_to_wishlist_path(:id => @sneaker.id), method: :post %></p>
             <p><%= link_to "Message seller for enquiries", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%></p>

@@ -16,7 +16,7 @@ Knowing that products are now available Australian sneakerheads can easily brows
 #### Features
 
 1. Users will be able to browse the latest sneakers that have been posted online by seller themselves. However buyers can only add an item once they have registered an account.  
-2. Users can upload a pair of sneakers they are willing to sell by filling up a form requiring details about the shoe itself before uploading it onto the market
+2. Users can upload a pair of sneakers they are willing to sell by filling up a form requiring details about the shoe itself before uploading it onto the market. The form will only accept a listed order of brands in so that it keeps the market authentic and unique.   
 3. Registered users can go into their account and check their wishlist whenever they'd like to revisit an item. Sellers can also do somethng similar by going into account and checking their sneaker posts in listings. 
 4. If a buyer would like to enquire about a pair of kicks they can send a message to the seller through an internal user messaging system.
 5. Admin user is capable of overlooking all registered users and can choose to block a user if they turn out to be a scammer or caught selling fakes.
@@ -43,6 +43,77 @@ The target audience is a majority of sneakerheads based in Australia who want to
 * ruby on rails
 * heroku
 * github
+
+### User stories 
+![Alt Text](app/assets/images/userstories.jpg)
+
+### Wireframes 
+![Alt Text](app/assets/images/wireframe-1.png)
+![Alt Text](app/assets/images/wireframe-2.png)
+
+### ERD
+![Alt Text](app/assets/images/ERD-marketplace.png)
+
+### Schema design
+![Alt Text](app/assets/images/schema.png)
+
+### Explain the different high-level components in your app
+The most complex component implemented into the application is building an administration account. A new column called "admin" is assigned a boolean value and added into "user" tables. A user can be assigned as an admin if `user.admin` is valued true. The rest of the users are given a default value of false. Then a generated controller for admin allows Admin to create views that looks different to what users normally see on the app. 
+
+``user.block = !(user.block)``
+
+Admin has been given the right to block or unblock users if necessary. In order for this function to work a new column names "block" is assigned a default boolean value of false to all users in the table. The code above allows Admin to block users through querying `users.block` value to true. The feature functions the other way around if `!users.block` query value back to false if user is unblocked.  
+
+### Detail any third party services that your app will use
+Integrating a devise authentication API on rails creates a User that can login and out of the application. Devise uses 10 modules to configure user authentication and 6 of which are enabled by default:
+* Database Authenticable
+* Rememberable
+* Recoverable
+* Registerable
+* Trackable
+* Validatable
+
+``
+<div class="col text-left">
+    <span><%= link_to "Home", root_path, class: 'link-to-text-color %></span>
+        <%if user_signed_in?%>
+    <span><%= link_to "Sell", new_sneaker_path, class: 'link-to-text-color' %></span>
+    <%end%>
+</div>
+``
+
+The code above will only allow user access to the ``Sell`` section once it verifies if the ``users_signed_in``to the application. If users are not signed in the link to the page will not be displayed. 
+
+### Describe your projects models in terms of the relationships they have with each other
+
+``Users``
+* can sell and buy many sneakers in the marketplace
+* can have many items(sneakers) in wishlist 
+* can have many listed items
+* can have many conversations with other registered users
+
+``Wishlist & Listings``
+* belongs to a user with many sneakers listed on the platform and added in wishlist 
+
+``Sneaker``
+* has one attached picture everytime a user posts a pair of sneakers to the market
+
+``Conversation & Messages``
+* there are many messages that can belong in a conversation with a user 
+* conversations belongs to a recipient and sender 
+
+``
+
+
+
+
+
+
+
+
+
+
+
 
 
 

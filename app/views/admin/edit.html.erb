@@ -3,10 +3,15 @@
         <div class="field">
             <%= f.hidden_field :id, value: @user.id %>
         </div>
-
+    <%if @user.block%>
+        <div>
+            <%= f.label "Do you want to unblock this person?" %><br />
+        </div>
+        <%else %>
         <div>
             <%= f.label "Do you want to block this person?" %><br />
         </div>
+    <%end%>
         <div>
             <%= f.submit "Yes"%>
         </div>

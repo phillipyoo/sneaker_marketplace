@@ -6,7 +6,7 @@ class AdminController < ApplicationController
     def update
         p params[:id]
         user = User.find(params[:user][:id])
-        user.block = true
+        user.block = !(user.block)
         user.save
         redirect_to administration_path
     end
@@ -15,13 +15,4 @@ class AdminController < ApplicationController
         @user = User.all
         @sneaker = Sneaker.all
     end 
-
-    # def unblock
-    #     p params[:id]
-    #     user = User.find(params[:user][:id])
-    #     user.block = false
-    #     user.save
-    #     redirect_to administration_path
-    # end
-
 end
